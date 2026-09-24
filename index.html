@@ -10,56 +10,56 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script>
 tailwind.config = {
-theme: {
-extend: {
-fontFamily: {
-'mitr': ['Mitr', 'sans-serif'],
-'fredoka': ['Fredoka', 'sans-serif'],
-},
-colors: {
-'pj-bg': '#fff5f7',
-'pj-blue-light': '#ffccd5',
-'pj-blue-main': '#ff85a2',
-'pj-blue-dark': '#705446',
-'pj-yellow-light': '#fff3c4',
-'pj-yellow-main': '#ffe066',
-'pj-pink': '#ffb3c6',
-'pj-white': '#ffffff',
-},
-boxShadow: {
-'soft': '0 10px 40px -10px rgba(255, 133, 162, 0.25)',
-'hard': '4px 4px 0px 0px rgba(112, 84, 70, 0.15)',
-}
-}
-}
+  theme: {
+    extend: {
+      fontFamily: {
+        'mitr': ['Mitr', 'sans-serif'],
+        'fredoka': ['Fredoka', 'sans-serif'],
+      },
+      colors: {
+        'pj-bg': '#fff5f7',
+        'pj-blue-light': '#ffccd5',
+        'pj-blue-main': '#ff85a2',
+        'pj-blue-dark': '#705446',
+        'pj-yellow-light': '#fff3c4',
+        'pj-yellow-main': '#ffe066',
+        'pj-pink': '#ffb3c6',
+        'pj-white': '#ffffff',
+      },
+      boxShadow: {
+        'soft': '0 10px 40px -10px rgba(255, 133, 162, 0.25)',
+        'hard': '4px 4px 0px 0px rgba(112, 84, 70, 0.15)',
+      }
+    }
+  }
 }
 </script>
 <style>
 body { font-family: 'Mitr', sans-serif; background-color: #fff5f7; overflow-x: hidden; color: #705446; }
 .font-eng { font-family: 'Fredoka', sans-serif; }
 .shape-header {
-border-radius: 40px 100px 100px 40px;
-position: relative;
+  border-radius: 40px 100px 100px 40px;
+  position: relative;
 }
 .shape-info {
-border-radius: 20px;
+  border-radius: 20px;
 }
 .shape-bubble-left {
-border-radius: 20px;
-position: relative;
+  border-radius: 20px;
+  position: relative;
 }
 .shape-bubble-left::after {
-content: '';
-position: absolute;
-right: -15px;
-top: 50%;
-transform: translateY(-50%);
-border-width: 15px 0 15px 20px;
-border-color: transparent transparent transparent #ff85a2;
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent #ff85a2;
 }
 .shape-nota {
-border-radius: 20px;
-position: relative;
+  border-radius: 20px;
+  position: relative;
 }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -70,46 +70,46 @@ position: relative;
 .modal-content { transition: transform 0.3s ease; transform: scale(0.95); }
 .modal.active .modal-content { transform: scale(1); }
 .bg-shapes {
-position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;
-overflow: hidden;
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;
+  overflow: hidden;
 }
 @keyframes spin-slow {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 .animate-spin-slow {
-animation: spin-slow 8s linear infinite;
+  animation: spin-slow 8s linear infinite;
 }
 .instagram-link-btn {
-display: none !important;
+  display: none !important;
 }
 #music-toggle-btn {
-display: none !important;
+  display: none !important;
 }
 input[type="file"]::file-selector-button {
-border: none !important;
-outline: none !important;
+  border: none !important;
+  outline: none !important;
 }
 .admin-tab-btn {
-background: transparent;
-color: #705446;
+  background: transparent;
+  color: #705446;
 }
 .admin-tab-btn.active {
-background: #ff85a2;
-color: #ffffff;
-box-shadow: 0 4px 10px 2px rgba(255, 133, 162, 0.5);
+  background: #ff85a2;
+  color: #ffffff;
+  box-shadow: 0 4px 10px 2px rgba(255, 133, 162, 0.5);
 }
 .order-note-tag {
-display: inline-flex;
-align-items: center;
-gap: 4px;
-background: #fff3c4;
-color: #705446;
-border: 1px solid rgba(255, 133, 162, 0.35);
-border-radius: 999px;
-padding: 2px 8px;
-font-size: 10px;
-font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff3c4;
+  color: #705446;
+  border: 1px solid rgba(255, 133, 162, 0.35);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 600;
 }
 </style>
 </head>
@@ -117,7 +117,6 @@ font-weight: 600;
 <!-- Audio Player Hidden Element (YouTube Iframe with Loop API) -->
 <iframe id="bg-music-iframe" style="display:none;" width="560" height="315"
 src="https://www.youtube.com/embed/BX7z7AvTCNw?enablejsapi=1&loop=1&playlist=BX7z7AvTCNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 <!-- Floating Music Toggle Button (ฝั่งซ้าย ขนาดเล็กลง - ซ่อนด้วย CSS) -->
 <button id="music-toggle-btn" onclick="toggleMusic()" class="fixed top-4 left-4 z-50 bg-pj-white border-2 border-pj-pink p-1.5 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center text-pj-pink group" title="เปิด/ปิด เพลง">
 <svg id="music-icon" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -125,13 +124,11 @@ src="https://www.youtube.com/embed/BX7z7AvTCNw?enablejsapi=1&loop=1&playlist=BX7
 </svg>
 <span id="music-status-dot" class="absolute top-0.5 right-0.5 w-2 h-2 bg-gray-400 rounded-full border border-white"></span>
 </button>
-
 <!-- Admin Panel Floating Button (ย้ายมาอยู่มุมบนซ้ายมือตามคำสั่ง) -->
 <button onclick="openAdminAuthModal()" class="fixed top-4 left-4 z-50 bg-pj-pink text-pj-white p-2.5 sm:p-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300 flex items-center gap-1.5 text-xs font-bold border-2 border-pj-white">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
 <span>หลังบ้าน</span>
 </button>
-
 <!-- Background Decors -->
 <div class="bg-shapes">
 <svg class="absolute top-10 -left-10 w-64 h-64 text-pj-blue-light opacity-50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +141,6 @@ src="https://www.youtube.com/embed/BX7z7AvTCNw?enablejsapi=1&loop=1&playlist=BX7
 <svg class="absolute bottom-[25%] left-[-30px] w-48 h-48 text-pj-blue-main opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M42.7,-73.4C55.9,-65.7,67.7,-54.6,76.5,-41.2C85.3,-27.8,91.1,-12.1,89.5,2.9C87.9,17.9,78.9,32.2,68.2,44.1C57.5,56,45.1,65.4,31.4,71.5C17.7,77.6,2.7,80.4,-11.9,79.5C-26.5,78.6,-40.7,74,-53.1,65.6C-65.5,57.2,-76.1,45,-81.6,30.6C-87.1,16.2,-87.5,-0.4,-82.6,-15.5C-77.7,-30.6,-67.5,-44.2,-54.6,-52.3C-41.7,-60.4,-26.1,-63,-11.5,-63.9C3.1,-64.8,17.7,-64,29.5,-71.1C41.3,-78.2,50.3,-83.2,42.7,-73.4Z" transform="translate(100 100)"/></svg>
 <svg class="absolute bottom-[10%] right-[5%] w-16 h-16 text-pj-yellow-main opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
 </div>
-
 <main class="max-w-[500px] mx-auto min-h-screen px-4 py-12 relative z-10 flex flex-col gap-8">
 <!-- Header Section -->
 <section class="relative">
@@ -156,7 +152,7 @@ src="https://www.youtube.com/embed/BX7z7AvTCNw?enablejsapi=1&loop=1&playlist=BX7
 </svg>
 <div class="w-32 h-36 bg-pj-white p-2.5 pb-8 rounded shadow-lg border border-pj-blue-light/50 flex flex-col items-center relative">
 <div class="w-full h-full bg-pj-blue-light/20 overflow-hidden rounded-sm">
-<img id="site-logo-img" src="https://placehold.co/150x150/ffb3c6/ffffff?text=Miori" alt="โลโก้" class="w-full h-full object-cover">
+<img id="site-logo-img" src="ไม่มีชื่อ 73_20260922064650.png" alt="โลโก้" class="w-full h-full object-cover">
 </div>
 </div>
 </div>
@@ -177,16 +173,14 @@ Welcome to my shop
 ร้านมิรับทํา ป้าย ลายน้ำ เริ่มต้น 39.-
 </p>
 </section>
-
 <!-- Banner Section (ขนาด 1122*495) -->
 <section class="mx-4 relative">
 <div class="bg-pj-white p-2 rounded-3xl shadow-soft border-2 border-pj-blue-light overflow-hidden">
 <div class="relative w-full rounded-2xl overflow-hidden aspect-[1122/495] bg-pj-blue-light/20">
-<img id="site-banner-img" src="https://placehold.co/1122x495/ffccd5/705446?text=Miori+Shop+Banner" alt="แบรนเนอร์" class="w-full h-full object-cover">
+<img id="site-banner-img" src="ไม่มีชื่อ 80_20260925012941.png" alt="แบรนเนอร์" class="w-full h-full object-cover">
 </div>
 </div>
 </section>
-
 <!-- ปุ่มเช็คคิวงาน -->
 <section class="mx-4 relative">
 <button onclick="openModal('modal-queue-view')" class="w-full bg-gradient-to-r from-pj-pink via-pj-yellow-main to-pj-blue-light p-1 rounded-3xl shadow-soft hover:scale-[1.02] transition-transform duration-300">
@@ -206,7 +200,6 @@ Welcome to my shop
 </div>
 </button>
 </section>
-
 <!-- Product Cards (3 ช่อง) -->
 <section class="mx-4">
 <div class="flex items-center gap-2 mb-3">
@@ -215,9 +208,9 @@ Welcome to my shop
 </div>
 <div class="grid grid-cols-3 gap-3">
 <!-- Slot 1: Block -->
-<a id="prod-link-1" href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1QK" target="_blank" class="bg-pj-white p-2 rounded-2xl border-2 border-pj-pink/50 shadow-sm flex flex-col items-center hover:scale-105 transition-transform">
+<a id="prod-link-1" href="https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALC13AUC1QK" target="_blank" class="bg-pj-white p-2 rounded-2xl border-2 border-pj-pink/50 shadow-sm flex flex-col items-center hover:scale-105 transition-transform">
 <div class="w-full aspect-square rounded-xl overflow-hidden bg-pj-pink/20 mb-2 border border-pj-pink/30">
-<img id="prod-img-1" src="https://placehold.co/1280x1280/ffb3c6/ffffff?text=Block" alt="Block" class="w-full h-full object-cover">
+<img id="prod-img-1" src="ไม่มีชื่อ 79_20260924224203.png" alt="Block" class="w-full h-full object-cover">
 </div>
 <span class="w-full bg-pj-pink text-pj-white text-center py-1.5 rounded-xl text-xs font-bold font-eng">
 Block
@@ -226,7 +219,7 @@ Block
 <!-- Slot 2: Toon -->
 <a id="prod-link-2" href="https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTID" target="_blank" class="bg-pj-white p-2 rounded-2xl border-2 border-pj-yellow-main shadow-sm flex flex-col items-center hover:scale-105 transition-transform">
 <div class="w-full aspect-square rounded-xl overflow-hidden bg-pj-yellow-light/50 mb-2 border border-pj-yellow-main/30">
-<img id="prod-img-2" src="https://placehold.co/1280x1280/ffe066/705446?text=Toon" alt="Toon" class="w-full h-full object-cover">
+<img id="prod-img-2" src="ไม่มีชื่อ 79_20260924224154.png" alt="Toon" class="w-full h-full object-cover">
 </div>
 <span class="w-full bg-pj-yellow-main text-pj-blue-dark text-center py-1.5 rounded-xl text-xs font-bold font-eng">
 Toon
@@ -235,7 +228,7 @@ Toon
 <!-- Slot 3: Descor -->
 <a id="prod-link-3" href="https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl" target="_blank" class="bg-pj-white p-2 rounded-2xl border-2 border-pj-blue-light shadow-sm flex flex-col items-center hover:scale-105 transition-transform">
 <div class="w-full aspect-square rounded-xl overflow-hidden bg-pj-blue-light/30 mb-2 border border-pj-blue-light/30">
-<img id="prod-img-3" src="https://placehold.co/1280x1280/ffccd5/705446?text=Descor" alt="Descor" class="w-full h-full object-cover">
+<img id="prod-img-3" src="ไม่มีชื่อ 79_20260924224159.png" alt="Descor" class="w-full h-full object-cover">
 </div>
 <span class="w-full bg-pj-blue-light text-pj-blue-dark text-center py-1.5 rounded-xl text-xs font-bold font-eng">
 Descor
@@ -243,7 +236,6 @@ Descor
 </a>
 </div>
 </section>
-
 <!-- Portfolio Section -->
 <section class="relative mr-8 mt-4">
 <svg class="absolute -right-6 -bottom-4 w-10 h-10 text-pj-yellow-main opacity-80 z-20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
@@ -281,7 +273,6 @@ Descor
 </div>
 </div>
 </section>
-
 <!-- Pricing & Add-ons Section -->
 <section class="ml-4 mr-4 mt-2 relative">
 <svg class="absolute -right-2 top-32 w-12 h-12 text-pj-blue-light opacity-50 z-0" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="4" transform="rotate(15 12 12)"/></svg>
@@ -325,7 +316,6 @@ Pricing
 หมายเหตุ: ราคาขึ้นอยู่กับความละเอียดของข้อมูลและปริมาณเนื้อหา ทางร้านขอสงวนสิทธิ์ในการประเมินราคาตามความเหมาะสมนะคะ
 </p>
 </section>
-
 <!-- Process & Rules -->
 <section class="mx-4 space-y-4">
 <div class="shape-nota bg-pj-white border-2 border-pj-pink p-5 shadow-sm">
@@ -340,28 +330,27 @@ Pricing
 </div>
 </div>
 <ul class="text-xs space-y-2 pl-4 list-disc marker:text-pj-blue-main">
-<li>ตามปกติลองาน 4-8 ชั่วโมง แล้วแต่คิวของวันนั้นๆ</li>
+<li>ตามปกติรองาน 4-8 ชั่วโมง แล้วแต่คิวของวันนั้น ๆ</li>
 <li><span class="font-bold text-pj-blue-main">งานเร่ง *2 ของราคา</span></li>
 <li>แจ้งรายละเอียดงานให้ครบก่อนเริ่มงาน</li>
-<li>เน้นย้ำ หลังจากส่งงานให้รีเช็คตอบกลับภายในไม่เกิน 30 นาที</li>
+<li>เน้นย้ำหลังจากส่งงานให้รีเช็ค ตอบกลับภายในไม่เกิน 30 นาที</li>
 <li>หากส่งงานเรียบร้อยแล้ว ลูกค้าต้องการปรับเปลี่ยนงาน ต้องสั่งใหม่เท่านั้น</li>
-<li>หากทางร้านทำผิดบรีฟ จะทำการแก้ไขให้ฟรี</li>
+<li>หากทางร้านทำผิดบรีฟจะทำการแก้ไขให้ฟรี</li>
 <li>ห้ามนำไฟล์งานหรือองค์ประกอบภายในงานไปแจกต่อ ขายต่อ หรือส่งต่อให้บุคคลอื่นโดยไม่ได้รับอนุญาต</li>
 <li>การสั่งงานถือว่ายอมรับเงื่อนไขของร้านแล้ว กรุณาอ่านรายละเอียดให้ครบก่อนสั่งงานนะคะ</li>
 </ul>
 <h4 class="font-bold text-sm mt-4 mb-2 bg-pj-yellow-light inline-block px-2 py-0.5 rounded text-pj-blue-dark">ขั้นตอนการสั่งงาน</h4>
 <ol class="text-xs space-y-2 pl-4 list-decimal marker:text-pj-blue-main marker:font-bold">
 <li>บอกประเภทงานที่ต้องการทำ เช่น ป้ายบัญชี ริชเมนู เป็นต้น</li>
-<li>บอกจำนวนงาน</li>
-<li>เลือกบล็อก ฟอนต์ ตูน ของตกแต่ง ในลิงก์(ลิงก์ไว้เลือกของต่างๆ) ได้เลย</li>
-<li>แจ้งรายละเอียดคำให้ชัดเจน ส่งเป็นแบบข้อความเท่านั้น รบกวนตรวจสอบข้อความก่อนน้า</li>
+<li>บอกจํานวนงาน</li>
+<li>เลือกบล็อก ฟอนต์ ดูน ของตกแต่งในลิงก์ (ลิงก์ที่ไว้เลือกของต่าง ๆ) ได้เลย</li>
+<li>แจ้งรายละเอียดค่าให้ชัดเจน ส่งเป็นแบบข้อความเท่านั้น รบกวนตรวจสอบข้อความก่อนน้า</li>
 <li>รอทางร้านรวมยอดและรอคอนเฟิร์มคิวงาน</li>
 </ol>
 <div class="mt-3 bg-pj-yellow-light/60 p-2 rounded text-[10px] text-pj-blue-dark/80">
 <span class="font-bold">หมายเหตุ:</span> ลูกค้าต้องการอะไรพิมพ์บอกให้ชัดเจน เพราะทางร้านจะทำตามข้อความบรีฟที่ลูกค้าแจ้งมา
 </div>
 </div>
-
 <div class="shape-nota bg-pj-blue-dark text-pj-white p-5 shadow-sm overflow-hidden">
 <svg class="absolute -bottom-4 -left-4 w-16 h-16 text-pj-blue-light opacity-10 transform -rotate-12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
 <svg class="absolute top-4 right-4 w-5 h-5 text-pj-yellow-main opacity-80" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
@@ -379,7 +368,6 @@ Pricing
 </ul>
 </div>
 </section>
-
 <!-- ระบบรีวิวร้านค้า -->
 <section class="mx-4 relative">
 <div class="bg-pj-white border-2 border-pj-pink rounded-[24px] p-5 shadow-soft relative">
@@ -401,7 +389,6 @@ Pricing
 </div>
 </div>
 </section>
-
 <!-- Contact Section -->
 <section class="mt-8 mb-12 flex flex-col items-center">
 <h2 class="font-eng text-xl font-bold text-pj-blue-main mb-4 flex items-center gap-2">
@@ -422,7 +409,6 @@ Contact
 <p class="text-xs font-semibold text-pj-blue-dark/60 mt-6">ขอบคุณที่ไว้วางใจ Miori Shop</p>
 </section>
 </main>
-
 <!-- Modal: ป๊อบอัพระบบเช็คคิวงานลูกค้า -->
 <div id="modal-queue-view" class="modal inactive fixed inset-0 z-50 flex items-center justify-center p-4">
 <div class="absolute inset-0 bg-pj-blue-dark/40 backdrop-blur-sm" onclick="closeModal('modal-queue-view')"></div>
@@ -455,7 +441,6 @@ Contact
 </div>
 </div>
 </div>
-
 <!-- Modal: สำหรับลูกค้าเขียนรีวิว -->
 <div id="modal-review-form" class="modal inactive fixed inset-0 z-50 flex items-center justify-center p-4">
 <div class="absolute inset-0 bg-pj-blue-dark/40 backdrop-blur-sm" onclick="closeModal('modal-review-form')"></div>
@@ -484,7 +469,6 @@ Contact
 </form>
 </div>
 </div>
-
 <!-- Modal: รหัสผ่านเข้าหลังบ้าน Admin -->
 <div id="modal-admin-auth" class="modal inactive fixed inset-0 z-50 flex items-center justify-center p-4">
 <div class="absolute inset-0 bg-pj-blue-dark/50 backdrop-blur-sm" onclick="closeModal('modal-admin-auth')"></div>
@@ -509,7 +493,6 @@ Contact
 </button>
 </div>
 </div>
-
 <!-- Modal: ระบบหลังบ้าน Admin Panel -->
 <div id="modal-admin-panel" class="modal inactive fixed inset-0 z-50 flex items-center justify-center p-4">
 <div class="absolute inset-0 bg-pj-blue-dark/40 backdrop-blur-sm" onclick="closeModal('modal-admin-panel')"></div>
@@ -526,80 +509,13 @@ Contact
 <p class="text-xs text-pj-blue-dark/70 font-medium">จัดการระบบหลังบ้านร้าน Miori Shop</p>
 </div>
 </div>
-<!-- แถบแท็บสลับหน้าจัดการหลังบ้าน 3 หน้า -->
-<div class="grid grid-cols-3 gap-1.5 mt-4 mb-1 bg-pj-white/60 p-1.5 rounded-2xl border border-pj-pink/30">
-<button id="admin-tab-btn-1" onclick="switchAdminTab('admin-tab-1')" class="admin-tab-btn font-eng text-[11px] font-bold py-2 rounded-xl transition-all">ระบบหลังบ้าน</button>
-<button id="admin-tab-btn-2" onclick="switchAdminTab('admin-tab-2')" class="admin-tab-btn font-eng text-[11px] font-bold py-2 rounded-xl transition-all">แก้ไขข้อมูลร้าน</button>
+<!-- แถบแท็บสลับหน้าจัดการหลังบ้าน 2 หน้า -->
+<div class="grid grid-cols-2 gap-1.5 mt-4 mb-1 bg-pj-white/60 p-1.5 rounded-2xl border border-pj-pink/30">
+<button id="admin-tab-btn-2" onclick="switchAdminTab('admin-tab-2')" class="admin-tab-btn font-eng text-[11px] font-bold py-2 rounded-xl transition-all active">แก้ไขข้อมูลร้าน</button>
 <button id="admin-tab-btn-3" onclick="switchAdminTab('admin-tab-3')" class="admin-tab-btn font-eng text-[11px] font-bold py-2 rounded-xl transition-all">เช็คคิว</button>
 </div>
-
-<!-- หน้าที่ 1: ระบบหลังบ้าน (เปลี่ยนรูปภาพผ่าน URL ลิงก์ / อนุมัติรีวิว / เปลี่ยนรหัสผ่าน) -->
-<div id="admin-tab-1" class="admin-tab-page space-y-5 mt-4">
-<!-- 1. ส่วนใส่ URL ลิงก์รูปภาพทั้งหมด -->
-<div class="bg-pj-white p-4 rounded-2xl border-2 border-pj-pink/40 shadow-sm">
-<h3 class="font-bold text-sm text-pj-blue-dark mb-3 flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-pj-pink inline-block"></span>
-จัดการรูปภาพร้านค้า (วาง URL ลิงก์รูปภาพจาก Drive, Facebook ฯลฯ)
-</h3>
-<div class="space-y-3 text-xs">
-<div class="bg-pj-bg p-3 rounded-xl border border-pj-pink/30 space-y-1.5">
-<label class="block font-bold text-pj-blue-dark">1. รูปโลโก้ (โพลารอยด์):</label>
-<input type="text" id="url-input-logo" placeholder="วางลิงก์รูปภาพ URL..." class="w-full border border-pj-pink/40 rounded-xl px-3 py-1.5 bg-white text-xs">
-</div>
-<div class="bg-pj-bg p-3 rounded-xl border border-pj-pink/30 space-y-1.5">
-<label class="block font-bold text-pj-blue-dark">2. รูปแบนเนอร์ (1122x495):</label>
-<input type="text" id="url-input-banner" placeholder="วางลิงก์รูปภาพ URL..." class="w-full border border-pj-pink/40 rounded-xl px-3 py-1.5 bg-white text-xs">
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-<div class="bg-pj-bg p-2.5 rounded-xl border border-pj-pink/30 space-y-1">
-<label class="block font-bold text-pj-blue-dark text-[11px]">3. รูป Block:</label>
-<input type="text" id="url-input-prod1" placeholder="วางลิงก์รูปภาพ URL..." class="w-full border border-pj-pink/40 rounded-xl px-2 py-1 bg-white text-[10px]">
-</div>
-<div class="bg-pj-bg p-2.5 rounded-xl border border-pj-pink/30 space-y-1">
-<label class="block font-bold text-pj-blue-dark text-[11px]">4. รูป Toon:</label>
-<input type="text" id="url-input-prod2" placeholder="วางลิงก์รูปภาพ URL..." class="w-full border border-pj-pink/40 rounded-xl px-2 py-1 bg-white text-[10px]">
-</div>
-<div class="bg-pj-bg p-2.5 rounded-xl border border-pj-pink/30 space-y-1">
-<label class="block font-bold text-pj-blue-dark text-[11px]">5. รูป Descor:</label>
-<input type="text" id="url-input-prod3" placeholder="วางลิงก์รูปภาพ URL..." class="w-full border border-pj-pink/40 rounded-xl px-2 py-1 bg-white text-[10px]">
-</div>
-</div>
-<button onclick="saveAllImageChanges()" class="w-full bg-pj-pink text-pj-white font-bold py-2.5 rounded-xl text-xs hover:bg-pj-blue-main transition shadow-md mt-3 flex items-center justify-center gap-1">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/></svg>
-<span>บันทึกการเปลี่ยนรูปภาพทั้งหมด</span>
-</button>
-</div>
-</div>
-
-<!-- 3. อนุมัติรีวิวลูกค้า -->
-<div class="bg-pj-white p-4 rounded-2xl border-2 border-pj-pink/40 shadow-sm">
-<h3 class="font-bold text-sm text-pj-pink mb-3 flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-pj-pink inline-block"></span>
-อนุมัติรีวิวจากลูกค้า
-</h3>
-<div id="admin-pending-reviews-list" class="space-y-3 max-h-56 overflow-y-auto pr-1">
-<!-- Loaded dynamically -->
-</div>
-</div>
-
-<!-- 4. ตั้งค่าเปลี่ยนรหัสผ่านแอดมิน -->
-<div class="bg-pj-yellow-light/60 p-4 rounded-2xl border-2 border-pj-yellow-main shadow-sm">
-<h3 class="font-bold text-sm text-pj-blue-dark mb-2 flex items-center gap-1.5">
-<svg class="w-4 h-4 text-pj-blue-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 0121 9z"/></svg>
-ตั้งค่าเปลี่ยนรหัสผ่านแอดมิน
-</h3>
-<div class="grid grid-cols-2 gap-2 mb-2">
-<input type="password" id="change-pass-new" placeholder="รหัสผ่านใหม่..." class="bg-white border border-pj-pink/40 rounded-xl px-3 py-1.5 text-xs">
-<input type="password" id="change-pass-confirm" placeholder="ยืนยันรหัสผ่านใหม่..." class="bg-white border border-pj-pink/40 rounded-xl px-3 py-1.5 text-xs">
-</div>
-<button onclick="changeAdminPassword()" class="w-full bg-pj-blue-dark text-white font-bold py-2 rounded-xl text-xs hover:bg-pj-blue-main transition shadow-sm">
-บันทึกรหัสผ่านใหม่
-</button>
-</div>
-</div>
-
-<!-- หน้าที่ 2: แก้ไขข้อมูลร้าน (ลิงก์ช่องทางติดต่อ & Google Drive) -->
-<div id="admin-tab-2" class="admin-tab-page space-y-5 mt-4 hidden">
+<!-- หน้าที่ 1: แก้ไขข้อมูลร้าน (ลิงก์ช่องทางติดต่อ & Google Drive + อนุมัติรีวิว + เปลี่ยนรหัสผ่าน) -->
+<div id="admin-tab-2" class="admin-tab-page space-y-5 mt-4">
 <div class="bg-pj-white p-4 rounded-2xl border-2 border-pj-pink/40 shadow-sm">
 <h3 class="font-bold text-sm text-pj-blue-dark mb-3 flex items-center gap-2">
 <span class="w-3 h-3 rounded-full bg-pj-yellow-main inline-block"></span>
@@ -635,9 +551,35 @@ Contact
 </button>
 </div>
 </div>
+
+<!-- อนุมัติรีวิวลูกค้า -->
+<div class="bg-pj-white p-4 rounded-2xl border-2 border-pj-pink/40 shadow-sm">
+<h3 class="font-bold text-sm text-pj-pink mb-3 flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-pj-pink inline-block"></span>
+อนุมัติรีวิวจากลูกค้า
+</h3>
+<div id="admin-pending-reviews-list" class="space-y-3 max-h-56 overflow-y-auto pr-1">
+<!-- Loaded dynamically -->
+</div>
 </div>
 
-<!-- หน้าที่ 3: เช็คคิว (จัดการคิวงานลูกค้า) -->
+<!-- ตั้งค่าเปลี่ยนรหัสผ่านแอดมิน -->
+<div class="bg-pj-yellow-light/60 p-4 rounded-2xl border-2 border-pj-yellow-main shadow-sm">
+<h3 class="font-bold text-sm text-pj-blue-dark mb-2 flex items-center gap-1.5">
+<svg class="w-4 h-4 text-pj-blue-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 0121 9z"/></svg>
+ตั้งค่าเปลี่ยนรหัสผ่านแอดมิน
+</h3>
+<div class="grid grid-cols-2 gap-2 mb-2">
+<input type="password" id="change-pass-new" placeholder="รหัสผ่านใหม่..." class="bg-white border border-pj-pink/40 rounded-xl px-3 py-1.5 text-xs">
+<input type="password" id="change-pass-confirm" placeholder="ยืนยันรหัสผ่านใหม่..." class="bg-white border border-pj-pink/40 rounded-xl px-3 py-1.5 text-xs">
+</div>
+<button onclick="changeAdminPassword()" class="w-full bg-pj-blue-dark text-white font-bold py-2 rounded-xl text-xs hover:bg-pj-blue-main transition shadow-sm">
+บันทึกรหัสผ่านใหม่
+</button>
+</div>
+</div>
+
+<!-- หน้าที่ 2: เช็คคิว (จัดการคิวงานลูกค้า) -->
 <div id="admin-tab-3" class="admin-tab-page space-y-5 mt-4 hidden">
 <div class="bg-pj-white p-3.5 sm:p-4 rounded-2xl border-2 border-pj-pink/40 shadow-sm overflow-hidden">
 <h3 class="font-bold text-sm text-pj-blue-dark mb-3 flex items-center gap-2">
@@ -669,39 +611,37 @@ Contact
 </div>
 </div>
 </div>
-
 <!-- JavaScript Logic -->
 <script>
 const ADMIN_EMAIL = 'mean13ayu@gmail.com';
 let currentAdminPass = '1234';
 if (localStorage.getItem('pj_admin_pass')) {
-    currentAdminPass = localStorage.getItem('pj_admin_pass');
+  currentAdminPass = localStorage.getItem('pj_admin_pass');
 }
-
 let siteData = {
-    logoUrl: "https://placehold.co/150x150/ffb3c6/ffffff?text=Miori",
-    bannerUrl: "https://placehold.co/1122x495/ffccd5/705446?text=Miori+Shop+Banner",
-    products: [
-        { img: "https://placehold.co/1280x1280/ffb3c6/ffffff?text=Block" },
-        { img: "https://placehold.co/1280x1280/ffe066/705446?text=Toon" },
-        { img: "https://placehold.co/1280x1280/ffccd5/705446?text=Descor" }
-    ],
-    links: {
-        facebook: "https://www.facebook.com/profile.php?id=61591413135110",
-        line: "https://lin.ee/XkF46in",
-        instagram: "https://www.instagram.com/pinkjulie.land",
-        driveBlock: "https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1QK",
-        driveToon: "https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTID",
-        driveDescor: "https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl"
-    }
+  logoUrl: "ไม่มีชื่อ 73_20260922064650.png",
+  bannerUrl: "ไม่มีชื่อ 80_20260925012941.png",
+  products: [
+    { img: "ไม่มีชื่อ 79_20260924224203.png" },
+    { img: "ไม่มีชื่อ 79_20260924224154.png" },
+    { img: "ไม่มีชื่อ 79_20260924224159.png" }
+  ],
+  links: {
+    facebook: "https://www.facebook.com/profile.php?id=61591413135110",
+    line: "https://lin.ee/XkF46in",
+    instagram: "https://www.instagram.com/pinkjulie.land",
+    driveBlock: "https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALC13AUC1QK",
+    driveToon: "https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTID",
+    driveDescor: "https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl"
+  }
 };
 
 let queues = [
-    { id: 1, name: "คุณมินิ (ร้านน่ารัก)", status: 50, note: "ป้ายบัญชี ธีมพาสเทล" },
-    { id: 2, name: "คุณแพรวา WebShop", status: 25, note: "ทำเว็บไซต์หน้าร้าน" },
-    { id: 3, name: "คุณโบว์ลิ่ง Card", status: 75, note: "ริชเมนู" },
-    { id: 4, name: "คุณอาร์ม เดิมเกม", status: 100, note: "ป้ายเดิมเกม" },
-    { id: 5, name: "คุณจอย ป้ายบัญชี", status: 0, note: "ป้ายบัญชี" }
+  { id: 1, name: "คุณมินิ (ร้านน่ารัก)", status: 50, note: "ป้ายบัญชี ธีมพาสเทล" },
+  { id: 2, name: "คุณแพรวา WebShop", status: 25, note: "ทำเว็บไซต์หน้าร้าน" },
+  { id: 3, name: "คุณโบว์ลิ่ง Card", status: 75, note: "ริชเมนู" },
+  { id: 4, name: "คุณอาร์ม เดิมเกม", status: 100, note: "ป้ายเดิมเกม" },
+  { id: 5, name: "คุณจอย ป้ายบัญชี", status: 0, note: "ป้ายบัญชี" }
 ];
 
 let reviews = [];
@@ -709,547 +649,508 @@ let reviews = [];
 /* Audio Music Toggle logic with loop support */
 let isPlayingMusic = false;
 function toggleMusic() {
-    const iframe = document.getElementById('bg-music-iframe');
-    const statusDot = document.getElementById('music-status-dot');
-    if (!iframe) return;
-    if (!isPlayingMusic) {
-        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-        isPlayingMusic = true;
-        if(statusDot) {
-            statusDot.classList.remove('bg-gray-400');
-            statusDot.classList.add('bg-green-500');
-        }
-    } else {
-        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-        isPlayingMusic = false;
-        if(statusDot) {
-            statusDot.classList.remove('bg-green-500');
-            statusDot.classList.add('bg-gray-400');
-        }
+  const iframe = document.getElementById('bg-music-iframe');
+  const statusDot = document.getElementById('music-status-dot');
+  if (!iframe) return;
+  if (!isPlayingMusic) {
+    iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    isPlayingMusic = true;
+    if(statusDot) {
+      statusDot.classList.remove('bg-gray-400');
+      statusDot.classList.add('bg-green-500');
     }
+  } else {
+    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    isPlayingMusic = false;
+    if(statusDot) {
+      statusDot.classList.remove('bg-green-500');
+      statusDot.classList.add('bg-gray-400');
+    }
+  }
 }
 
 /* Broadcast Channel & Storage Sync */
 let broadcastChan = null;
 function initSharedDb() {
-    try {
-        if ('BroadcastChannel' in window) {
-            broadcastChan = new BroadcastChannel('miori_shop_channel');
-            broadcastChan.onmessage = (event) => {
-                if (event.data) {
-                    if (event.data.siteData) siteData = event.data.siteData;
-                    if (event.data.queues) queues = event.data.queues;
-                    if (event.data.reviews) reviews = event.data.reviews;
-                    renderSiteElements();
-                    renderQueues();
-                    renderReviews();
-                    if (document.getElementById('modal-admin-panel') && document.getElementById('modal-admin-panel').classList.contains('active')) {
-                        renderAdminQueueManage();
-                        renderAdminPendingReviews();
-                    }
-                }
-            };
+  try {
+    if ('BroadcastChannel' in window) {
+      broadcastChan = new BroadcastChannel('miori_shop_channel');
+      broadcastChan.onmessage = (event) => {
+        if (event.data) {
+          if (event.data.siteData) siteData = event.data.siteData;
+          if (event.data.queues) queues = event.data.queues;
+          if (event.data.reviews) reviews = event.data.reviews;
+          renderSiteElements();
+          renderQueues();
+          renderReviews();
+          if (document.getElementById('modal-admin-panel') && document.getElementById('modal-admin-panel').classList.contains('active')) {
+            renderAdminQueueManage();
+            renderAdminPendingReviews();
+          }
         }
-    } catch (e) {
-        console.error("BroadcastChannel fail", e);
+      };
     }
+  } catch (e) {
+    console.error("BroadcastChannel fail", e);
+  }
 
-    window.addEventListener('storage', (e) => {
-        if (e.key === 'pj_site_data' && e.newValue) {
-            try { siteData = JSON.parse(e.newValue); renderSiteElements(); } catch(err){}
-        }
-        if (e.key === 'pj_queues' && e.newValue) {
-            try { queues = JSON.parse(e.newValue); renderQueues(); } catch(err){}
-        }
-        if (e.key === 'pj_reviews' && e.newValue) {
-            try { reviews = JSON.parse(e.newValue); renderReviews(); } catch(err){}
-        }
-    });
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'pj_site_data' && e.newValue) {
+      try { siteData = JSON.parse(e.newValue); renderSiteElements(); } catch(err){}
+    }
+    if (e.key === 'pj_queues' && e.newValue) {
+      try { queues = JSON.parse(e.newValue); renderQueues(); } catch(err){}
+    }
+    if (e.key === 'pj_reviews' && e.newValue) {
+      try { reviews = JSON.parse(e.newValue); renderReviews(); } catch(err){}
+    }
+  });
 }
 
 function pushSharedState() {
-    if (broadcastChan) {
-        try {
-            broadcastChan.postMessage({ siteData: siteData, queues: queues, reviews: reviews });
-        } catch (e) {}
-    }
+  if (broadcastChan) {
+    try {
+      broadcastChan.postMessage({ siteData: siteData, queues: queues, reviews: reviews });
+    } catch (e) {}
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    try {
-        const savedSiteData = localStorage.getItem('pj_site_data');
-        if (savedSiteData) siteData = JSON.parse(savedSiteData);
-        if (!siteData.links) {
-            siteData.links = {
-                facebook: "https://www.facebook.com/profile.php?id=61591413135110",
-                line: "https://lin.ee/XkF46in",
-                instagram: "https://www.instagram.com/pinkjulie.land",
-                driveBlock: "https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALc13AUC1QK",
-                driveToon: "https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTID",
-                driveDescor: "https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl"
-            };
-        }
-        const savedQueues = localStorage.getItem('pj_queues');
-        if (savedQueues) {
-            queues = JSON.parse(savedQueues);
-            queues.forEach(q => { if (typeof q.note === 'undefined') q.note = ""; });
-        }
-        const savedReviews = localStorage.getItem('pj_reviews');
-        if (savedReviews) reviews = JSON.parse(savedReviews);
-    } catch(e) {
-        console.error('LocalStorage load error', e);
+  try {
+    const savedSiteData = localStorage.getItem('pj_site_data');
+    if (savedSiteData) siteData = JSON.parse(savedSiteData);
+    if (!siteData.links) {
+      siteData.links = {
+        facebook: "https://www.facebook.com/profile.php?id=61591413135110",
+        line: "https://lin.ee/XkF46in",
+        instagram: "https://www.instagram.com/pinkjulie.land",
+        driveBlock: "https://drive.google.com/drive/folders/10wVjpHKCr8rMZ-UoCd5G_ALC13AUC1QK",
+        driveToon: "https://drive.google.com/drive/folders/1T36yZKLHN5huKfwu1NYW_PVLLsswHTID",
+        driveDescor: "https://drive.google.com/drive/folders/1YLsW06GXE_ENus4ad8AUNU4FEM74Z2vl"
+      };
     }
-
-    renderSiteElements();
-    renderQueues();
-    renderReviews();
-    initSharedDb();
+    const savedQueues = localStorage.getItem('pj_queues');
+    if (savedQueues) {
+      queues = JSON.parse(savedQueues);
+      queues.forEach(q => { if (typeof q.note === 'undefined') q.note = ""; });
+    }
+    const savedReviews = localStorage.getItem('pj_reviews');
+    if (savedReviews) reviews = JSON.parse(savedReviews);
+  } catch(e) {
+    console.error('LocalStorage load error', e);
+  }
+  renderSiteElements();
+  renderQueues();
+  renderReviews();
+  initSharedDb();
 });
 
 function renderSiteElements() {
-    if(siteData.logoUrl) document.getElementById('site-logo-img').src = siteData.logoUrl;
-    if(siteData.bannerUrl) document.getElementById('site-banner-img').src = siteData.bannerUrl;
-    if(siteData.products && siteData.products[0] && siteData.products[0].img) document.getElementById('prod-img-1').src = siteData.products[0].img;
-    if(siteData.products && siteData.products[1] && siteData.products[1].img) document.getElementById('prod-img-2').src = siteData.products[1].img;
-    if(siteData.products && siteData.products[2] && siteData.products[2].img) document.getElementById('prod-img-3').src = siteData.products[2].img;
-    renderChannelLinks();
+  if(siteData.logoUrl) document.getElementById('site-logo-img').src = siteData.logoUrl;
+  if(siteData.bannerUrl) document.getElementById('site-banner-img').src = siteData.bannerUrl;
+  if(siteData.products && siteData.products[0] && siteData.products[0].img) document.getElementById('prod-img-1').src = siteData.products[0].img;
+  if(siteData.products && siteData.products[1] && siteData.products[1].img) document.getElementById('prod-img-2').src = siteData.products[1].img;
+  if(siteData.products && siteData.products[2] && siteData.products[2].img) document.getElementById('prod-img-3').src = siteData.products[2].img;
+  renderChannelLinks();
 }
 
 function renderChannelLinks() {
-    if (!siteData.links) return;
-    const fb = document.getElementById('contact-facebook-link');
-    const line = document.getElementById('contact-line-link');
-    const ig = document.getElementById('contact-instagram-link');
+  if (!siteData.links) return;
+  const fb = document.getElementById('contact-facebook-link');
+  const line = document.getElementById('contact-line-link');
+  const ig = document.getElementById('contact-instagram-link');
+  if (fb && siteData.links.facebook) fb.href = siteData.links.facebook;
+  if (line && siteData.links.line) line.href = siteData.links.line;
+  if (ig && siteData.links.instagram) ig.href = siteData.links.instagram;
 
-    if (fb && siteData.links.facebook) fb.href = siteData.links.facebook;
-    if (line && siteData.links.line) line.href = siteData.links.line;
-    if (ig && siteData.links.instagram) ig.href = siteData.links.instagram;
-
-    const prodBlock = document.getElementById('prod-link-1');
-    const prodToon = document.getElementById('prod-link-2');
-    const prodDescor = document.getElementById('prod-link-3');
-
-    if (prodBlock && siteData.links.driveBlock) prodBlock.href = siteData.links.driveBlock;
-    if (prodToon && siteData.links.driveToon) prodToon.href = siteData.links.driveToon;
-    if (prodDescor && siteData.links.driveDescor) prodDescor.href = siteData.links.driveDescor;
+  const prodBlock = document.getElementById('prod-link-1');
+  const prodToon = document.getElementById('prod-link-2');
+  const prodDescor = document.getElementById('prod-link-3');
+  if (prodBlock && siteData.links.driveBlock) prodBlock.href = siteData.links.driveBlock;
+  if (prodToon && siteData.links.driveToon) prodToon.href = siteData.links.driveToon;
+  if (prodDescor && siteData.links.driveDescor) prodDescor.href = siteData.links.driveDescor;
 }
 
 function populateChannelLinksInputs() {
-    if (!siteData.links) return;
-    const fbInput = document.getElementById('link-facebook-input');
-    const lineInput = document.getElementById('link-line-input');
-    const blockInput = document.getElementById('link-drive-block-input');
-    const toonInput = document.getElementById('link-drive-toon-input');
-    const descorInput = document.getElementById('link-drive-descor-input');
+  if (!siteData.links) return;
+  const fbInput = document.getElementById('link-facebook-input');
+  const lineInput = document.getElementById('link-line-input');
+  const blockInput = document.getElementById('link-drive-block-input');
+  const toonInput = document.getElementById('link-drive-toon-input');
+  const descorInput = document.getElementById('link-drive-descor-input');
 
-    if (fbInput) fbInput.value = siteData.links.facebook || '';
-    if (lineInput) lineInput.value = siteData.links.line || '';
-    if (blockInput) blockInput.value = siteData.links.driveBlock || '';
-    if (toonInput) toonInput.value = siteData.links.driveToon || '';
-    if (descorInput) descorInput.value = siteData.links.driveDescor || '';
+  if (fbInput) fbInput.value = siteData.links.facebook || '';
+  if (lineInput) lineInput.value = siteData.links.line || '';
+  if (blockInput) blockInput.value = siteData.links.driveBlock || '';
+  if (toonInput) toonInput.value = siteData.links.driveToon || '';
+  if (descorInput) descorInput.value = siteData.links.driveDescor || '';
 }
 
 function saveChannelLinks() {
-    const fb = document.getElementById('link-facebook-input').value.trim();
-    const line = document.getElementById('link-line-input').value.trim();
-    const block = document.getElementById('link-drive-block-input').value.trim();
-    const toon = document.getElementById('link-drive-toon-input').value.trim();
-    const descor = document.getElementById('link-drive-descor-input').value.trim();
+  const fb = document.getElementById('link-facebook-input').value.trim();
+  const line = document.getElementById('link-line-input').value.trim();
+  const block = document.getElementById('link-drive-block-input').value.trim();
+  const toon = document.getElementById('link-drive-toon-input').value.trim();
+  const descor = document.getElementById('link-drive-descor-input').value.trim();
 
-    if (!siteData.links) siteData.links = {};
-    if (fb) siteData.links.facebook = fb;
-    if (line) siteData.links.line = line;
-    if (block) siteData.links.driveBlock = block;
-    if (toon) siteData.links.driveToon = toon;
-    if (descor) siteData.links.driveDescor = descor;
+  if (!siteData.links) siteData.links = {};
+  if (fb) siteData.links.facebook = fb;
+  if (line) siteData.links.line = line;
+  if (block) siteData.links.driveBlock = block;
+  if (toon) siteData.links.driveToon = toon;
+  if (descor) siteData.links.driveDescor = descor;
 
-    try {
-        localStorage.setItem('pj_site_data', JSON.stringify(siteData));
-    } catch(e) {}
-
-    renderChannelLinks();
-    pushSharedState();
-    alert('บันทึกลิงก์เรียบร้อยแล้วค่ะ');
+  try {
+    localStorage.setItem('pj_site_data', JSON.stringify(siteData));
+  } catch(e) {}
+  renderChannelLinks();
+  pushSharedState();
+  alert('บันทึกลิงก์เรียบร้อยแล้วค่ะ');
 }
 
 function openModal(id) {
-    const modal = document.getElementById(id);
-    if(modal) {
-        modal.classList.remove('inactive');
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
+  const modal = document.getElementById(id);
+  if(modal) {
+    modal.classList.remove('inactive');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closeModal(id) {
-    const modal = document.getElementById(id);
-    if(modal) {
-        modal.classList.remove('active');
-        modal.classList.add('inactive');
-        document.body.style.overflow = '';
-    }
+  const modal = document.getElementById(id);
+  if(modal) {
+    modal.classList.remove('active');
+    modal.classList.add('inactive');
+    document.body.style.overflow = '';
+  }
 }
 
 function openReviewModal() { openModal('modal-review-form'); }
 function openAdminAuthModal() { openModal('modal-admin-auth'); }
 
 function checkAdminLogin() {
-    const emailInput = document.getElementById('admin-email-input');
-    const passInput = document.getElementById('admin-pass-input');
-    const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
-    const pass = passInput ? passInput.value.trim() : '';
+  const emailInput = document.getElementById('admin-email-input');
+  const passInput = document.getElementById('admin-pass-input');
+  const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+  const pass = passInput ? passInput.value.trim() : '';
 
-    if (email === ADMIN_EMAIL.toLowerCase() && pass === currentAdminPass) {
-        closeModal('modal-admin-auth');
-        if(emailInput) emailInput.value = '';
-        if(passInput) passInput.value = '';
-        loadAdminData();
-        openModal('modal-admin-panel');
-    } else {
-        alert('อีเมลหรือรหัสผ่านไม่ถูกต้องค่ะ');
-    }
+  if (email === ADMIN_EMAIL.toLowerCase() && pass === currentAdminPass) {
+    closeModal('modal-admin-auth');
+    if(emailInput) emailInput.value = '';
+    if(passInput) passInput.value = '';
+    loadAdminData();
+    openModal('modal-admin-panel');
+  } else {
+    alert('อีเมลหรือรหัสผ่านไม่ถูกต้องค่ะ');
+  }
 }
 
 function changeAdminPassword() {
-    const newPass = document.getElementById('change-pass-new').value.trim();
-    const confirmPass = document.getElementById('change-pass-confirm').value.trim();
+  const newPass = document.getElementById('change-pass-new').value.trim();
+  const confirmPass = document.getElementById('change-pass-confirm').value.trim();
 
-    if (!newPass) {
-        alert('กรุณากรอกรหัสผ่านใหม่ด้วยนะคะ');
-        return;
-    }
-    if (newPass !== confirmPass) {
-        alert('รหัสผ่านใหม่และรหัสผ่านยืนยันไม่ตรงกันค่ะ');
-        return;
-    }
-
-    currentAdminPass = newPass;
-    localStorage.setItem('pj_admin_pass', newPass);
-    document.getElementById('change-pass-new').value = '';
-    document.getElementById('change-pass-confirm').value = '';
-    alert('เปลี่ยนรหัสผ่านสำเร็จเรียบร้อยค่ะ!');
+  if (!newPass) {
+    alert('กรุณากรอกรหัสผ่านใหม่ด้วยนะคะ');
+    return;
+  }
+  if (newPass !== confirmPass) {
+    alert('รหัสผ่านใหม่และรหัสผ่านยืนยันไม่ตรงกันค่ะ');
+    return;
+  }
+  currentAdminPass = newPass;
+  localStorage.setItem('pj_admin_pass', newPass);
+  document.getElementById('change-pass-new').value = '';
+  document.getElementById('change-pass-confirm').value = '';
+  alert('เปลี่ยนรหัสผ่านสำเร็จเรียบร้อยค่ะ!');
 }
 
-/* แปลง URL Google Drive ให้เป็น Direct View URL โดยอัตโนมัติ */
-function formatGoogleDriveUrl(url) {
-    if (!url) return '';
-    let match = url.match(/\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/);
-    if (match && match[1]) {
-        return `https://lh3.googleusercontent.com/d/${match[1]}`;
-    }
-    return url;
-}
-
-function saveAllImageChanges() {
-    const logoUrl = document.getElementById('url-input-logo').value.trim();
-    const bannerUrl = document.getElementById('url-input-banner').value.trim();
-    const prod1Url = document.getElementById('url-input-prod1').value.trim();
-    const prod2Url = document.getElementById('url-input-prod2').value.trim();
-    const prod3Url = document.getElementById('url-input-prod3').value.trim();
-
-    if (!logoUrl && !bannerUrl && !prod1Url && !prod2Url && !prod3Url) {
-        alert('กรุณากรอก URL ลิงก์รูปภาพอย่างน้อย 1 ช่องก่อนบันทึกนะคะ');
-        return;
-    }
-
-    if (logoUrl) siteData.logoUrl = formatGoogleDriveUrl(logoUrl);
-    if (bannerUrl) siteData.bannerUrl = formatGoogleDriveUrl(bannerUrl);
-    if (prod1Url) siteData.products[0].img = formatGoogleDriveUrl(prod1Url);
-    if (prod2Url) siteData.products[1].img = formatGoogleDriveUrl(prod2Url);
-    if (prod3Url) siteData.products[2].img = formatGoogleDriveUrl(prod3Url);
-
-    try {
-        localStorage.setItem('pj_site_data', JSON.stringify(siteData));
-        renderSiteElements();
-        pushSharedState();
-        alert('บันทึกรูปภาพผ่านลิงก์ URL เรียบร้อยแล้วค่ะ!');
-    } catch (e) {
-        console.error('Storage error', e);
-        alert('เกิดข้อผิดพลาดในการบันทึกข้อมูลค่ะ');
-    }
+function compressAndProcessFile(file, maxWidth, maxHeight, callback) {
+  if (!file) {
+    callback(null);
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const img = new Image();
+    img.onload = function() {
+      const canvas = document.createElement('canvas');
+      let width = img.width;
+      let height = img.height;
+      if (width > maxWidth) {
+        height = Math.round((height * maxWidth) / width);
+        width = maxWidth;
+      }
+      if (height > maxHeight) {
+        width = Math.round((width * maxHeight) / height);
+        height = maxHeight;
+      }
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, width, height);
+      const base64Res = canvas.toDataURL('image/jpeg', 0.72);
+      callback(base64Res);
+    };
+    img.onerror = function() { callback(null); };
+    img.src = e.target.result;
+  };
+  reader.onerror = function() { callback(null); };
+  reader.readAsDataURL(file);
 }
 
 function loadAdminData() {
-    populateChannelLinksInputs();
-    populateImageUrlInputs();
-    renderAdminQueueManage();
-    renderAdminPendingReviews();
-    switchAdminTab('admin-tab-1');
-}
-
-function populateImageUrlInputs() {
-    const logoInput = document.getElementById('url-input-logo');
-    const bannerInput = document.getElementById('url-input-banner');
-    const prod1Input = document.getElementById('url-input-prod1');
-    const prod2Input = document.getElementById('url-input-prod2');
-    const prod3Input = document.getElementById('url-input-prod3');
-
-    if (logoInput) logoInput.value = siteData.logoUrl || '';
-    if (bannerInput) bannerInput.value = siteData.bannerUrl || '';
-    if (prod1Input) prod1Input.value = (siteData.products && siteData.products[0]) ? siteData.products[0].img : '';
-    if (prod2Input) prod2Input.value = (siteData.products && siteData.products[1]) ? siteData.products[1].img : '';
-    if (prod3Input) prod3Input.value = (siteData.products && siteData.products[2]) ? siteData.products[2].img : '';
+  populateChannelLinksInputs();
+  renderAdminQueueManage();
+  renderAdminPendingReviews();
+  switchAdminTab('admin-tab-2');
 }
 
 function switchAdminTab(tabId) {
-    document.querySelectorAll('.admin-tab-page').forEach(page => {
-        if (page.id === tabId) {
-            page.classList.remove('hidden');
-        } else {
-            page.classList.add('hidden');
-        }
-    });
-
-    document.querySelectorAll('.admin-tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-
-    const activeBtn = document.getElementById('admin-tab-btn-' + tabId.split('-').pop());
-    if (activeBtn) activeBtn.classList.add('active');
+  document.querySelectorAll('.admin-tab-page').forEach(page => {
+    if (page.id === tabId) {
+      page.classList.remove('hidden');
+    } else {
+      page.classList.add('hidden');
+    }
+  });
+  document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  const activeBtn = document.getElementById('admin-tab-btn-' + tabId.split('-').pop());
+  if (activeBtn) activeBtn.classList.add('active');
 }
 
 function renderQueues(filter = "") {
-    const container = document.getElementById('queue-list-container');
-    if(!container) return;
-    container.innerHTML = "";
+  const container = document.getElementById('queue-list-container');
+  if(!container) return;
+  container.innerHTML = "";
+  const filtered = queues.filter(q => q.name.toLowerCase().includes(filter.toLowerCase()));
+  if (filtered.length === 0) {
+    container.innerHTML = '<p class="text-xs text-center text-gray-400 py-4">ไม่พบคิวงานตามชื่อที่ค้นหา</p>';
+    return;
+  }
+  filtered.forEach(q => {
+    let badgeColor = "bg-gray-200 text-gray-600";
+    if(q.status == 25) badgeColor = "bg-pink-100 text-pink-600";
+    if(q.status == 50) badgeColor = "bg-yellow-100 text-yellow-700";
+    if(q.status == 75) badgeColor = "bg-pink-200 text-pink-700";
+    if(q.status == 100) badgeColor = "bg-green-100 text-green-700";
 
-    const filtered = queues.filter(q => q.name.toLowerCase().includes(filter.toLowerCase()));
-    if (filtered.length === 0) {
-        container.innerHTML = '<p class="text-xs text-center text-gray-400 py-4">ไม่พบคิวงานตามชื่อที่ค้นหา</p>';
-        return;
-    }
-
-    filtered.forEach(q => {
-        let badgeColor = "bg-gray-200 text-gray-600";
-        if(q.status == 25) badgeColor = "bg-pink-100 text-pink-600";
-        if(q.status == 50) badgeColor = "bg-yellow-100 text-yellow-700";
-        if(q.status == 75) badgeColor = "bg-pink-200 text-pink-700";
-        if(q.status == 100) badgeColor = "bg-green-100 text-green-700";
-
-        const div = document.createElement('div');
-        div.className = "bg-pj-bg p-3 rounded-2xl border border-pj-pink/30 flex flex-col gap-1.5";
-        div.innerHTML = `
-            <div class="flex justify-between items-center">
-                <span class="font-bold text-xs text-pj-blue-dark">${q.name}</span>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${badgeColor}">${q.status}%</span>
-            </div>
-            ${q.note ? `<div class="order-note-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>${q.note}</div>` : ''}
-            <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
-                <div class="bg-pj-pink h-full transition-all duration-500" style="width: ${q.status}%"></div>
-            </div>
-        `;
-        container.appendChild(div);
-    });
+    const div = document.createElement('div');
+    div.className = "bg-pj-bg p-3 rounded-2xl border border-pj-pink/30 flex flex-col gap-1.5";
+    div.innerHTML = `
+      <div class="flex justify-between items-center">
+        <span class="font-bold text-xs text-pj-blue-dark">${q.name}</span>
+        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${badgeColor}">${q.status}%</span>
+      </div>
+      ${q.note ? `<div class="order-note-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>${q.note}</div>` : ''}
+      <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+        <div class="bg-pj-pink h-full transition-all duration-500" style="width: ${q.status}%"></div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
 }
 
 function searchQueue() {
-    const val = document.getElementById('queue-search-input').value;
-    renderQueues(val);
+  const val = document.getElementById('queue-search-input').value;
+  renderQueues(val);
 }
 
 function renderAdminQueueManage() {
-    const container = document.getElementById('admin-queue-manage-list');
-    if(!container) return;
-    container.innerHTML = "";
-
-    queues.forEach((q) => {
-        const div = document.createElement('div');
-        div.className = "bg-pj-bg p-2.5 rounded-xl border border-pj-pink/30 flex flex-col gap-1.5 text-xs";
-        div.innerHTML = `
-            <div class="flex items-center justify-between gap-2">
-                <span class="font-bold text-pj-blue-dark truncate max-w-[150px]">${q.name}</span>
-                <div class="flex items-center gap-1.5">
-                    <select onchange="updateQueueStatus(${q.id}, this.value)" class="bg-white border border-pj-pink/40 rounded-lg px-1.5 py-1 text-[11px] font-bold">
-                        <option value="0" ${q.status == 0 ? 'selected' : ''}>0%</option>
-                        <option value="25" ${q.status == 25 ? 'selected' : ''}>25%</option>
-                        <option value="50" ${q.status == 50 ? 'selected' : ''}>50%</option>
-                        <option value="75" ${q.status == 75 ? 'selected' : ''}>75%</option>
-                        <option value="100" ${q.status == 100 ? 'selected' : ''}>100%</option>
-                    </select>
-                    <button onclick="deleteQueueItem(${q.id})" class="bg-red-500 text-white p-1 rounded-lg hover:bg-red-600 transition" title="ลบคิว">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-                    </button>
-                </div>
-            </div>
-            <input type="text" value="${(q.note || '').replace(/"/g, '&quot;')}" onchange="updateQueueNote(${q.id}, this.value)" placeholder="สั่งงานอะไร..." class="w-full bg-white border border-pj-pink/30 rounded-lg px-2 py-1 text-[11px] text-pj-blue-dark/80">
-        `;
-        container.appendChild(div);
-    });
+  const container = document.getElementById('admin-queue-manage-list');
+  if(!container) return;
+  container.innerHTML = "";
+  queues.forEach((q) => {
+    const div = document.createElement('div');
+    div.className = "bg-pj-bg p-2.5 rounded-xl border border-pj-pink/30 flex flex-col gap-1.5 text-xs";
+    div.innerHTML = `
+      <div class="flex items-center justify-between gap-2">
+        <span class="font-bold text-pj-blue-dark truncate max-w-[150px]">${q.name}</span>
+        <div class="flex items-center gap-1.5">
+          <select onchange="updateQueueStatus(${q.id}, this.value)" class="bg-white border border-pj-pink/40 rounded-lg px-1.5 py-1 text-[11px] font-bold">
+            <option value="0" ${q.status == 0 ? 'selected' : ''}>0%</option>
+            <option value="25" ${q.status == 25 ? 'selected' : ''}>25%</option>
+            <option value="50" ${q.status == 50 ? 'selected' : ''}>50%</option>
+            <option value="75" ${q.status == 75 ? 'selected' : ''}>75%</option>
+            <option value="100" ${q.status == 100 ? 'selected' : ''}>100%</option>
+          </select>
+          <button onclick="deleteQueueItem(${q.id})" class="bg-red-500 text-white p-1 rounded-lg hover:bg-red-600 transition" title="ลบคิว">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <input type="text" value="${(q.note || '').replace(/"/g, '&quot;')}" onchange="updateQueueNote(${q.id}, this.value)" placeholder="สั่งงานอะไร..." class="w-full bg-white border border-pj-pink/30 rounded-lg px-2 py-1 text-[11px] text-pj-blue-dark/80">
+    `;
+    container.appendChild(div);
+  });
 }
 
 function addNewQueueItem() {
-    const nameInput = document.getElementById('new-client-name');
-    const statusSelect = document.getElementById('new-client-status');
-    const noteInput = document.getElementById('new-client-note');
+  const nameInput = document.getElementById('new-client-name');
+  const statusSelect = document.getElementById('new-client-status');
+  const noteInput = document.getElementById('new-client-note');
+  const name = nameInput.value.trim();
+  const status = parseInt(statusSelect.value);
+  const note = noteInput ? noteInput.value.trim() : "";
 
-    const name = nameInput.value.trim();
-    const status = parseInt(statusSelect.value);
-    const note = noteInput ? noteInput.value.trim() : "";
-
-    if(!name) {
-        alert('กรุณากรอกชื่อลูกค้าด้วยนะคะ');
-        return;
-    }
-
-    const newId = queues.length > 0 ? Math.max(...queues.map(q => q.id)) + 1 : 1;
-    queues.push({ id: newId, name: name, status: status, note: note });
-
-    nameInput.value = '';
-    if (noteInput) noteInput.value = '';
-
-    saveQueues();
-    renderAdminQueueManage();
-    renderQueues();
+  if(!name) {
+    alert('กรุณากรอกชื่อลูกค้าด้วยนะคะ');
+    return;
+  }
+  const newId = queues.length > 0 ? Math.max(...queues.map(q => q.id)) + 1 : 1;
+  queues.push({ id: newId, name: name, status: status, note: note });
+  nameInput.value = '';
+  if (noteInput) noteInput.value = '';
+  saveQueues();
+  renderAdminQueueManage();
+  renderQueues();
 }
 
 function updateQueueStatus(id, newStatus) {
-    const target = queues.find(q => q.id === id);
-    if(target) {
-        target.status = parseInt(newStatus);
-        saveQueues();
-        renderQueues();
-    }
+  const target = queues.find(q => q.id === id);
+  if(target) {
+    target.status = parseInt(newStatus);
+    saveQueues();
+    renderQueues();
+  }
 }
 
 function updateQueueNote(id, newNote) {
-    const target = queues.find(q => q.id === id);
-    if(target) {
-        target.note = newNote;
-        saveQueues();
-        renderQueues();
-    }
+  const target = queues.find(q => q.id === id);
+  if(target) {
+    target.note = newNote;
+    saveQueues();
+    renderQueues();
+  }
 }
 
 function deleteQueueItem(id) {
-    if(confirm('คุณต้องการลบคิวงานนี้ใช่หรือไม่?')) {
-        queues = queues.filter(q => q.id !== id);
-        saveQueues();
-        renderAdminQueueManage();
-        renderQueues();
-    }
+  if(confirm('คุณต้องการลบคิวงานนี้ใช่หรือไม่?')) {
+    queues = queues.filter(q => q.id !== id);
+    saveQueues();
+    renderAdminQueueManage();
+    renderQueues();
+  }
 }
 
 function saveQueues() {
-    try {
-        localStorage.setItem('pj_queues', JSON.stringify(queues));
-    } catch(e){}
-    pushSharedState();
+  try {
+    localStorage.setItem('pj_queues', JSON.stringify(queues));
+  } catch(e){}
+  pushSharedState();
 }
 
 function handleReviewSubmit(e) {
-    e.preventDefault();
-    const name = document.getElementById('review-name').value.trim();
-    const text = document.getElementById('review-text').value.trim();
-    const fileInput = document.getElementById('review-proof-file');
+  e.preventDefault();
+  const name = document.getElementById('review-name').value.trim();
+  const text = document.getElementById('review-text').value.trim();
+  const fileInput = document.getElementById('review-proof-file');
 
-    if (!fileInput.files[0]) {
-        alert('กรุณาแนบรูปภาพหลักฐานการซื้อขายด้วยนะคะ');
-        return;
-    }
+  if (!fileInput.files[0]) {
+    alert('กรุณาแนบรูปภาพหลักฐานการซื้อขายด้วยนะคะ');
+    return;
+  }
 
-    const reader = new FileReader();
-    reader.onload = function(evt) {
-        const newReview = {
-            id: Date.now(),
-            name: name,
-            text: text,
-            img: evt.target.result || "https://placehold.co/100x100/ffb3c6/ffffff?text=User",
-            approved: false
-        };
-        reviews.push(newReview);
-        try {
-            localStorage.setItem('pj_reviews', JSON.stringify(reviews));
-        } catch(err){}
-        pushSharedState();
-        alert('ส่งรีวิวเรียบร้อยแล้วค่ะ! รอแอดมินอนุมัตินะคะ');
-        closeModal('modal-review-form');
-        e.target.reset();
+  compressAndProcessFile(fileInput.files[0], 300, 300, (imgBase64) => {
+    const newReview = {
+      id: Date.now(),
+      name: name,
+      text: text,
+      img: imgBase64 || "https://placehold.co/100x100/ffb3c6/ffffff?text=User",
+      approved: false
     };
-    reader.readAsDataURL(fileInput.files[0]);
+    reviews.push(newReview);
+    try {
+      localStorage.setItem('pj_reviews', JSON.stringify(reviews));
+    } catch(err){}
+    pushSharedState();
+    alert('ส่งรีวิวเรียบร้อยแล้วค่ะ! รอแอดมินอนุมัตินะคะ');
+    closeModal('modal-review-form');
+    e.target.reset();
+  });
 }
 
 function renderReviews() {
-    const container = document.getElementById('reviews-display-list');
-    if (!container) return;
-    container.innerHTML = '';
-
-    const approved = reviews.filter(r => r.approved);
-    if (approved.length === 0) {
-        container.innerHTML = '<p class="text-xs text-center text-pj-blue-dark/50 py-3">ยังไม่มีรีวิว ร้านเปิดใหม่รอรีวิวจากลูกค้านะคะ 💕</p>';
-        return;
-    }
-
-    approved.forEach(r => {
-        const div = document.createElement('div');
-        div.className = "bg-pj-bg p-3 rounded-2xl border border-pj-pink/30 flex gap-3 items-center";
-        div.innerHTML = `
-            <img src="${r.img}" class="w-10 h-10 rounded-full object-cover border border-pj-pink shrink-0">
-            <div class="text-xs">
-                <p class="font-bold text-pj-blue-dark">${r.name}</p>
-                <p class="text-pj-blue-dark/80 mt-0.5">${r.text}</p>
-            </div>
-        `;
-        container.appendChild(div);
-    });
+  const container = document.getElementById('reviews-display-list');
+  if (!container) return;
+  container.innerHTML = "";
+  const approved = reviews.filter(r => r.approved);
+  if (approved.length === 0) {
+    container.innerHTML = '<p class="text-xs text-center text-pj-blue-dark/50 py-3">ยังไม่มีรีวิว ร้านเปิดใหม่รอรีวิวจากลูกค้านะคะ</p>';
+    return;
+  }
+  approved.forEach(r => {
+    const div = document.createElement('div');
+    div.className = "bg-pj-bg p-3 rounded-2xl border border-pj-pink/30 flex gap-3 items-center";
+    div.innerHTML = `
+      <img src="${r.img}" class="w-10 h-10 rounded-full object-cover border border-pj-pink shrink-0">
+      <div class="text-xs">
+        <p class="font-bold text-pj-blue-dark">${r.name}</p>
+        <p class="text-pj-blue-dark/80 mt-0.5">${r.text}</p>
+      </div>
+    `;
+    container.appendChild(div);
+  });
 }
 
 function renderAdminPendingReviews() {
-    const container = document.getElementById('admin-pending-reviews-list');
-    if (!container) return;
-    container.innerHTML = "";
-
-    if (reviews.length === 0) {
-        container.innerHTML = '<p class="text-xs text-center text-gray-400 py-3">ไม่มีรายการรีวิวในระบบ</p>';
-        return;
-    }
-
-    reviews.forEach(r => {
-        const div = document.createElement('div');
-        div.className = "bg-white p-3 rounded-xl border border-pj-pink/30 flex items-center justify-between gap-2 text-xs";
-        div.innerHTML = `
-            <div class="flex items-center gap-2 overflow-hidden">
-                <img src="${r.img}" class="w-8 h-8 rounded-full object-cover shrink-0">
-                <div class="truncate">
-                    <p class="font-bold text-pj-blue-dark truncate">${r.name} ${r.approved ? '<span class="text-[9px] text-green-600 font-normal">(อนุมัติแล้ว)</span>' : ''}</p>
-                    <p class="text-[10px] text-gray-500 truncate">${r.text}</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-1 shrink-0">
-                ${!r.approved ? `<button onclick="approveReview(${r.id})" class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-lg hover:bg-green-600">อนุมัติ</button>` : ''}
-                <button onclick="deleteReview(${r.id})" class="bg-red-500 text-white p-1 rounded-lg hover:bg-red-600">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-                </button>
-            </div>
-        `;
-        container.appendChild(div);
-    });
+  const container = document.getElementById('admin-pending-reviews-list');
+  if (!container) return;
+  container.innerHTML = "";
+  if (reviews.length === 0) {
+    container.innerHTML = '<p class="text-xs text-center text-gray-400 py-3">ไม่มีรายการรีวิวในระบบ</p>';
+    return;
+  }
+  reviews.forEach(r => {
+    const div = document.createElement('div');
+    div.className = "bg-white p-3 rounded-xl border border-pj-pink/30 flex items-center justify-between gap-2 text-xs";
+    div.innerHTML = `
+      <div class="flex items-center gap-2 overflow-hidden">
+        <img src="${r.img}" class="w-8 h-8 rounded-full object-cover shrink-0">
+        <div class="truncate">
+          <p class="font-bold text-pj-blue-dark truncate">${r.name} ${r.approved ? '<span class="text-[9px] text-green-600 font-normal">(อนุมัติแล้ว)</span>' : ''}</p>
+          <p class="text-[10px] text-gray-500 truncate">${r.text}</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 shrink-0">
+        ${!r.approved ? `<button onclick="approveReview(${r.id})" class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-lg hover:bg-green-600">อนุมัติ</button>` : ''}
+        <button onclick="deleteReview(${r.id})" class="bg-red-500 text-white p-1 rounded-lg hover:bg-red-600">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+        </button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
 }
 
 function approveReview(id) {
-    const rev = reviews.find(r => r.id === id);
-    if (rev) {
-        rev.approved = true;
-        saveReviews();
-        renderAdminPendingReviews();
-        renderReviews();
-    }
+  const rev = reviews.find(r => r.id === id);
+  if (rev) {
+    rev.approved = true;
+    saveReviews();
+    renderAdminPendingReviews();
+    renderReviews();
+  }
 }
 
 function deleteReview(id) {
-    if(confirm('คุณต้องการลบรีวิวนี้ใช่หรือไม่?')) {
-        reviews = reviews.filter(r => r.id !== id);
-        saveReviews();
-        renderAdminPendingReviews();
-        renderReviews();
-    }
+  if(confirm('คุณต้องการลบรีวิวนี้ใช่หรือไม่?')) {
+    reviews = reviews.filter(r => r.id !== id);
+    saveReviews();
+    renderAdminPendingReviews();
+    renderReviews();
+  }
 }
 
 function saveReviews() {
-    try {
-        localStorage.setItem('pj_reviews', JSON.stringify(reviews));
-    } catch(e){}
-    pushSharedState();
+  try {
+    localStorage.setItem('pj_reviews', JSON.stringify(reviews));
+  } catch(e){}
+  pushSharedState();
 }
 </script>
 </body>
 </html>
+
